@@ -100,7 +100,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Note
 
-This project is still in development. You may encounter some issues. Report them in [Issue](https://www.github.com/BlazeMC404/OpenCLI/issue)
+This project is still in development. You may encounter some issues. Report them in [Issue](https://github.com/BlazeMC404/OpenCLI/issues)
 
 ---
 
