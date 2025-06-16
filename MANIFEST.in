@@ -1,0 +1,30 @@
+# Include project metadata and docs
+include README.md
+include LICENSE
+include setup.py
+include setup.cfg
+include pyproject.toml
+
+# Include all Python modules under src/opencli
+recursive-include src/opencli *.py
+
+# Specifically ensure command templates are packaged
+recursive-include src/opencli/commands *.py
+
+# Ensure shell templates are packaged
+recursive-include src/opencli/shells *.py
+
+# Include manager package
+recursive-include src/opencli/manager *.py
+
+# Include templates folder if present
+recursive-include src/opencli/templates *.py
+
+# Include tests
+recursive-include tests *.py
+
+# Include any additional docs
+recursive-include docs *.md *.rst
+
+# Exclude compiled Python files
+global-exclude *.pyc __pycache__

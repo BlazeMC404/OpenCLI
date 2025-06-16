@@ -1,0 +1,115 @@
+Metadata-Version: 2.4
+Name: opencli
+Version: 1.0.0
+Summary: Python framework for creating custom terminals and command-line shells
+Home-page: https://github.com/BlazeMC404/OpenCLI
+Author: BlazeMC404
+Author-email: your.email@example.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# OpenCLI
+
+**OpenCLI** is a Python framework for creating custom terminal environments and command-line shells with ease.
+
+## Features
+- `.setup(terminal_name, shell='opencli')` – Initialize a new terminal folder with chosen shell.
+- `.addcmd(command_name)` – Import built-in command templates into your terminal’s `bin` directory.
+- `.newcmd(name, code)` – Define and add custom commands dynamically.
+- `.shell(shell_name)` – Launch your terminal with the selected shell (`opencli`, `bash`, or `sh`).
+- ANSI-colored prompts and outputs.
+- Full logging and debug support.
+- Extensible architecture with templates and plugins.
+
+## Installation
+
+```bash
+pip install opencli
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/BlazeMC404/OpenCLI.git
+cd OpenCLI
+pip install .
+```
+
+## Quickstart
+
+```python
+from opencli import setup, addcmd, newcmd, shell
+
+# 1. Setup a new terminal named 'myterminal' with the default 'opencli' shell
+setup("myterminal", shell="opencli")
+
+# 2. Add built-in commands (e.g., echo, ls)
+addcmd("myterminal", "echo")
+addcmd("myterminal", "ls")
+
+# 3. Create a custom command
+custom_code = '''
+def run():
+    print("Hello from OpenCLI!")
+'''
+newcmd("myterminal", "hello", custom_code)
+
+# 4. Launch the shell
+shell("myterminal", shell_name="opencli")
+```
+
+## Project Structure
+
+```
+OpenCLI/
+├── src/
+│   └── opencli/
+│       ├── config.py
+│       ├── manager/
+│       │   ├── setup_manager.py
+│       │   ├── command_manager.py
+│       │   └── shell_launcher.py
+│       ├── shells/
+│       │   ├── opencli.py
+│       │   ├── bash.py
+│       │   └── sh.py
+│       └── templates/
+├── commands/
+│   ├── ls.py
+│   ├── cd.py
+│   └── ...
+├── tests/
+├── README.md
+├── LICENSE
+├── setup.cfg
+├── pyproject.toml
+└── MANIFEST.in
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or pull requests on GitHub.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

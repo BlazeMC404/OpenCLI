@@ -1,0 +1,31 @@
+[project]
+name = "opencli"
+version = "1.0.0"
+description = "Python framework for creating custom terminals and command-line shells"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+  { name = "BlazeMC404", email = "your.email@example.com" }
+]
+dependencies = [
+  # "some-dependency>=1.0.0",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/BlazeMC404/OpenCLI"
+"Documentation" = "https://github.com/BlazeMC404/OpenCLI#readme"
+"Repository" = "https://github.com/BlazeMC404/OpenCLI"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
