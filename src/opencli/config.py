@@ -54,7 +54,7 @@ class OpenCLIConfig:
         self.debug = os.getenv("OPENCLI_DEBUG", "0") == "1"
         self.terminal_width = self._get_terminal_width()
         self.default_shell = "opencli"
-        self.author = "Your Name"
+        self.author = "BlazeMC"
         self.root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
         self.log_path = os.path.join(self.root_path, "opencli.log")
         self.env = self._gather_env_info()

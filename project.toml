@@ -1,11 +1,11 @@
 [project]
 name = "opencli"
-version = "1.0.0"
+version = "1.0.1"
 description = "Python framework for creating custom terminals and command-line shells"
 readme = "README.md"
 license = { file = "LICENSE" }
 authors = [
-  { name = "BlazeMC404", email = "your.email@example.com" }
+  { name = "BlazeMC404", email = "blazemc404@example.com" }
 ]
 dependencies = [
   # "some-dependency>=1.0.0",

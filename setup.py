@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name="opencli",
-    version="1.0.0",
+    version="1.0.1",
     author="BlazeMC404",
-    author_email="your.email@example.com",
+    author_email="blazemc@gmail.com",
     description="Python framework for creating custom terminals and command-line shells",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -28,8 +28,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.10"
     ],
     python_requires=">=3.7",
 )

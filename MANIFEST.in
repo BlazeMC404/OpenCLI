@@ -17,9 +17,6 @@ recursive-include src/opencli/shells *.py
 # Include manager package
 recursive-include src/opencli/manager *.py
 
-# Include templates folder if present
-recursive-include src/opencli/templates *.py
-
 # Include tests
 recursive-include tests *.py
 

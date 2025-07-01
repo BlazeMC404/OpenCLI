@@ -20,9 +20,11 @@ src/opencli/commands/pwd.py
 src/opencli/commands/rm.py
 src/opencli/commands/touch.py
 src/opencli/manager/__init__.py
+src/opencli/manager/color_manager.py
 src/opencli/manager/command_manager.py
 src/opencli/manager/setup_manager.py
 src/opencli/manager/shell_launcher.py
 src/opencli/shells/bash.py
 src/opencli/shells/opencli.py
 src/opencli/shells/sh.py
+tests/test.py

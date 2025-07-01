@@ -124,7 +124,7 @@ def add_existing_command(terminal_name: str, command_name: str) -> None:
 
     if not template_path.is_file():
         logger.error(f"Command template '{command_name}.py' not found in '{commands_dir}'.")
-        raise FileNotFoundError(f"Command template '{command_name}.py' not found.")
+        raise FileNotFoundError(f"Command template '{command_name}' not found.")
 
     shutil.copy(template_path, target_path)
     logger.info(f"Copied command '{command_name}' to terminal '{terminal_name}'.")

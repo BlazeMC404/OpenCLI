@@ -1,10 +1,10 @@
 Metadata-Version: 2.4
 Name: opencli
-Version: 1.0.0
+Version: 1.0.1
 Summary: Python framework for creating custom terminals and command-line shells
 Home-page: https://github.com/BlazeMC404/OpenCLI
 Author: BlazeMC404
-Author-email: your.email@example.com
+Author-email: blazemc@gmail.com
 License: MIT
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
@@ -14,7 +14,6 @@ Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
-Classifier: License :: OSI Approved :: MIT License
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE
@@ -30,9 +29,12 @@ Dynamic: summary
 
 # OpenCLI
 
-**OpenCLI** is a Python framework for creating custom terminal environments and command-line shells with ease.
+**OpenCLI** is a Python framework for creating custom terminal environments and command-line shells with ease. It's open source and dependency-free.
+
+---
 
 ## Features
+- `.colors` - Color your own created shells and terminal.
 - `.setup(terminal_name, shell='opencli')` – Initialize a new terminal folder with chosen shell.
 - `.addcmd(command_name)` – Import built-in command templates into your terminal’s `bin` directory.
 - `.newcmd(name, code)` – Define and add custom commands dynamically.
@@ -41,19 +43,19 @@ Dynamic: summary
 - Full logging and debug support.
 - Extensible architecture with templates and plugins.
 
+---
+
 ## Installation
 
-```bash
-pip install opencli
-```
-
-Or install from source:
+Install from source:
 
 ```bash
 git clone https://github.com/BlazeMC404/OpenCLI.git
-cd OpenCLI
-pip install .
+cd OpenCLI/dist
+pip install opencli-1.0.0-py3-none-any.whl
 ```
+
+---
 
 ## Quickstart
 
@@ -61,7 +63,7 @@ pip install .
 from opencli import setup, addcmd, newcmd, shell
 
 # 1. Setup a new terminal named 'myterminal' with the default 'opencli' shell
-setup("myterminal", shell="opencli")
+setup("myterminal", "opencli")
 
 # 2. Add built-in commands (e.g., echo, ls)
 addcmd("myterminal", "echo")
@@ -71,6 +73,7 @@ addcmd("myterminal", "ls")
 custom_code = '''
 def run():
     print("Hello from OpenCLI!")
+    
 '''
 newcmd("myterminal", "hello", custom_code)
 
@@ -78,38 +81,89 @@ newcmd("myterminal", "hello", custom_code)
 shell("myterminal", shell_name="opencli")
 ```
 
-## Project Structure
+---
 
+## Available Shells
+
+- `opencli` - OpenCLI's own shell
+- `bash` - Simulated BASH shell
+- `sh` - Simulated sh shell
+
+---
+
+## Available Command Templates
+
+- `ls` – Lists directory contents
+- `clear` – Clear the terminal screen
+- `cd` – Changes the current directory (built-in)
+- `cat` – Prints file contents
+- `pwd` – Shows current directory
+- `mkdir` – Creates a new directory
+- `rm` – Removes a file or directory
+- `touch` – Creates a new file
+- `echo` – Prints text to terminal
+
+---
+
+## Available colors
+
+- `RESET` - No colors.
+- `BOLD` - Bold text.
+- `BLACK` - Black color.
+- `RED` - Red color.
+- `GREEN` - Green color.
+- `YELLOW` - Yellow color.
+- `BLUE` - Blue color.
+- `MAGENTA` - Magenta color.
+- `CYAN` - Cyan color.
+- `WHITE` - White color.
+- `FAIL` - Color of error.
+
+usage:
+```python
+from opencli import colors
+
+print(colors.BOLD + "This is a bold text" + colors.RESET)
 ```
-OpenCLI/
-├── src/
-│   └── opencli/
-│       ├── config.py
-│       ├── manager/
-│       │   ├── setup_manager.py
-│       │   ├── command_manager.py
-│       │   └── shell_launcher.py
-│       ├── shells/
-│       │   ├── opencli.py
-│       │   ├── bash.py
-│       │   └── sh.py
-│       └── templates/
-├── commands/
-│   ├── ls.py
-│   ├── cd.py
-│   └── ...
-├── tests/
-├── README.md
-├── LICENSE
-├── setup.cfg
-├── pyproject.toml
-└── MANIFEST.in
-```
+
+---
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or pull requests on GitHub.
+Contributions are welcome! To contribute:
+
+1. Fork this repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a pull request
+
+Make sure your code passes `flake8` and includes appropriate logging.
+
+---
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Note
+
+This project is still in development. You may encounter some issues. Report them in [Issue](https://github.com/BlazeMC404/OpenCLI/issues)
+
+---
+
+## Acknowledgements
+
+Thanks to the Linux community and Python ecosystem for inspiring this project.
+
+---
+
+## What's new
+
+#### 1.0.1 update is here. 
+
+- New feature added to color your own shells and terminals.
+- Some bug fixes and improvements.
+
+

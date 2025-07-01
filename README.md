@@ -5,6 +5,7 @@
 ---
 
 ## Features
+- `.colors` - Color your own created shells and terminal.
 - `.setup(terminal_name, shell='opencli')` – Initialize a new terminal folder with chosen shell.
 - `.addcmd(command_name)` – Import built-in command templates into your terminal’s `bin` directory.
 - `.newcmd(name, code)` – Define and add custom commands dynamically.
@@ -17,11 +18,7 @@
 
 ## Installation
 
-```bash
-pip install opencli (coming soon)
-```
-
-Or install from source:
+Install from source:
 
 ```bash
 git clone https://github.com/BlazeMC404/OpenCLI.git
@@ -79,6 +76,29 @@ shell("myterminal", shell_name="opencli")
 
 ---
 
+## Available colors
+
+- `RESET` - No colors.
+- `BOLD` - Bold text.
+- `BLACK` - Black color.
+- `RED` - Red color.
+- `GREEN` - Green color.
+- `YELLOW` - Yellow color.
+- `BLUE` - Blue color.
+- `MAGENTA` - Magenta color.
+- `CYAN` - Cyan color.
+- `WHITE` - White color.
+- `FAIL` - Color of error.
+
+usage:
+```python
+from opencli import colors
+
+print(colors.BOLD + "This is a bold text" + colors.RESET)
+```
+
+---
+
 ## Contributing
 
 Contributions are welcome! To contribute:
@@ -107,4 +127,14 @@ This project is still in development. You may encounter some issues. Report them
 ## Acknowledgements
 
 Thanks to the Linux community and Python ecosystem for inspiring this project.
+
+---
+
+## What's new
+
+#### 1.0.1 update is here. 
+
+- New feature added to color your own shells and terminals.
+- Some bug fixes and improvements.
+
 

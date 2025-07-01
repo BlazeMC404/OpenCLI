@@ -12,13 +12,15 @@ from opencli.config import logger as opencli_logger
 # Import core managers
 from .setup_manager import setup_terminal, _copy_shell_template
 from .command_manager import add_existing_command, create_new_command
+from .color_manager import Colors
 
 # Optionally expose managers in __all__
 __all__ = [
     "setup_terminal",
     "add_existing_command",
     "create_new_command",
-    "_copy_shell_template"
+    "_copy_shell_template",
+    "Colors"
 ]
 
 # Log manager init
